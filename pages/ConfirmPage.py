@@ -24,4 +24,3 @@ class ConfirmPage:
 
     def get_purchase_result(self):
         return self.driver.find_element(*ConfirmPage.purchase_result).text
-

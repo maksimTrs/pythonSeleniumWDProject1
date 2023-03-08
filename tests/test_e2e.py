@@ -1,12 +1,3 @@
-import pytest
-from selenium import webdriver
-import time
-
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
-from pages.CheckOutPage import CheckOutPage
 from pages.HomePage import HomePage
 from utilities.BaseClass import BaseClass
 

@@ -1,7 +1,7 @@
 import pytest
 
-from testdata.home_page_data import HomePageData
 from pages.HomePage import HomePage
+from testdata.home_page_data import HomePageData
 from utilities.BaseClass import BaseClass
 
 

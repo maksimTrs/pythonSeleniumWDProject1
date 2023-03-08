@@ -3,7 +3,7 @@ node {
         git 'https://github.com/maksimTrs/pythonSeleniumWDProject1'
      }
     stage('Python Project Build') {
-        bat 'pytest tests/ -v -s --browser_name="%browserName%" --URL="%url%"'
+        bat 'pytest tests/ -v -s --browser_name="%browserName%" --URL="%url%" --alluredir=./allureReports'
      }
     stage('Reports Generation') {
         allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]

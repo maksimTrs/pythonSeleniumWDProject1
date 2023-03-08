@@ -7,6 +7,13 @@ node {
      }
     stage('Reports Generation') {
        // allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
+       allure([
+      	   includeProperties: false,
+      	   jdk: '',
+      	   properties: [],
+      	   reportBuildPolicy: 'ALWAYS',
+      	   results: [[path: './allureReports']]
+    	   ])
         emailext attachLog: true, body: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!<br>Visit ${BUILD_URL} URL  to observe more details', subject: 'Pipeline Build [Pipeline1 for Projects] was finished', to: 'hokagemax@gmail.com'
      }
 }
